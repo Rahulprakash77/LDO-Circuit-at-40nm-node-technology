@@ -184,6 +184,8 @@ where Vout_measured is the actual output voltage, and Vout_desired is the target
 
 ![s2](https://github.com/user-attachments/assets/a8be4a19-3e4d-4157-9648-d8ad9b4db11e)
 
+![image](https://github.com/user-attachments/assets/efeb058f-590a-4cf7-b5c1-8e8f8878ca96)
+
 
 ## 4. Stability Analysis
 **DCGain=34.8dB , GBW = 9.2MHz and Phase Margin = 88.65 , Bandwidth=162.1kHz**
@@ -198,20 +200,43 @@ where Vout_measured is the actual output voltage, and Vout_desired is the target
 
 ![S_stageLDO_tran](https://github.com/user-attachments/assets/c66bbbc6-aa5e-411d-a601-87644b02e040)
 
+![trans1](https://github.com/user-attachments/assets/75aab684-3277-46b6-8a3b-10eee21224b9)
 
 
-## 7. CMRR Plot
+![trans11](https://github.com/user-attachments/assets/ada76cf3-4081-4328-bbba-b6afa9888309)
 
-![pmos2stage_cmrr](https://github.com/user-attachments/assets/958e63b6-099f-41cb-994f-03875ab1c4fc)
 
+
+## 6. Line Regulation 
+**0.029 mV/V**
+
+![S_stageLDO_lineRegu](https://github.com/user-attachments/assets/7f501f7a-6251-44f7-a770-656adba50568)
+
+
+![lineregu1](https://github.com/user-attachments/assets/26d6345e-88ff-4532-83e7-f70f17ddbd04)
+
+## 7. Load Regulation 
+**3.57 mV/mA**
+
+![S_stageLDO_loadRegu](https://github.com/user-attachments/assets/9741e752-52af-4814-a176-1ddfac4f28f4)
+
+
+![Loadregu1](https://github.com/user-attachments/assets/274bff3f-f9b7-4bd1-8b24-c923a5faba6a)
 
 ## 8. PSRR Plot
-![pmos2stage_psrr2](https://github.com/user-attachments/assets/b7f85af2-b525-433d-aeff-f90810a1ac32)
 
+
+![S_stageLDO_psrr](https://github.com/user-attachments/assets/b1a5678f-b62f-4ea6-8b0a-9aa0bbc799c3)
+
+![psrr1](https://github.com/user-attachments/assets/f653ea25-c550-46d0-bdf4-4604e3d063cb)
 
 ## 9. Noise Plot
 
-![pmos2stage_noise2](https://github.com/user-attachments/assets/3df16002-7372-4619-b7b2-88776d8ddf7f)
+![S_stageLDO_noise](https://github.com/user-attachments/assets/0c13d035-6c32-40cb-b83a-28458f81669a)
+
+
+![noise1](https://github.com/user-attachments/assets/a2555052-18d9-467b-9e04-8f473ec79cf8)
+
 
 
 
