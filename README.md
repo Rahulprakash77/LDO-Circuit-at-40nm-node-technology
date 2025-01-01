@@ -175,37 +175,30 @@ where Vout_measured is the actual output voltage, and Vout_desired is the target
 
 𝟲. (𝗖𝘂𝗿𝗿𝗲𝗻𝘁 𝗱𝗿𝗮𝘄𝗻 𝗯𝘆 𝘁𝗵𝗲 𝗟𝗗𝗢 𝗶𝘁𝘀𝗲𝗹𝗳 𝘂𝗻𝗱𝗲𝗿 𝗻𝗼-𝗹𝗼𝗮𝗱 𝗰𝗼𝗻𝗱𝗶𝘁𝗶𝗼𝗻𝘀 𝗳𝗼𝗿 𝗶𝗻𝘁𝗲𝗿𝗻𝗮𝗹 𝗼𝗽𝗲𝗿𝗮𝘁𝗶𝗼𝗻) 𝟭𝟬 μ𝗔 
 
-## 2. calculating the DC parameter using Dc analysis of nmos and pmos (μpCox and μnCox)
 
-upcox = 115u , 
-uncox = 285u
+## 2. Designing full circuit and make proper wire connection
 
-![betaeffctive](https://github.com/user-attachments/assets/173a8a26-fb37-4621-9ef3-be2dd1d0dc9e)
+![S_stageLDO_BasicCkt](https://github.com/user-attachments/assets/0cd65aa3-622c-4da8-9ea4-b8c336fe510b)
 
+## 3.DC Response
 
-## 3. calculating the min and max threshold value of m1 and m3 mos
-
-Vtp = 485mV ,
-Vtn = 460mV
-
-## 4. Designing full circuit and make proper wire connection
-
-![nmos2stageSchematic](https://github.com/user-attachments/assets/14fdaabc-4ac1-4e3b-9520-b95aca139718)
+![s2](https://github.com/user-attachments/assets/a8be4a19-3e4d-4157-9648-d8ad9b4db11e)
 
 
-## 5. Ac analysis ( Bode plot) 
-**DCGain=52dB , GBW = 39.21MHz and Phase Margin = 61.93 , Bandwidth=164kHz**
+## 4. Stability Analysis
+**DCGain=34.8dB , GBW = 9.2MHz and Phase Margin = 88.65 , Bandwidth=162.1kHz**
 
-![nmos2stageacjpg](https://github.com/user-attachments/assets/3b06c168-f859-49b6-acd4-2d3f92ba032a)
+![S_stageLDO_stb](https://github.com/user-attachments/assets/80d259f8-aff7-46d5-95ad-62af5945d6d0)
 
-
-## 6. Calculation of Slew Rate.
-We know that according to target specifications the slew rate should be 20V/μsec. Lets see how much we are actually getting. Below is the setup for calculation of SR. I connected inverting terminal to output in unity gain closed loop form and provided pulse input at the non-inverting terminal and observed the transient reponse.
-
-![nmos2stageSR](https://github.com/user-attachments/assets/0c50c973-4d14-4114-a126-d7160c56de1a)
+![stb1](https://github.com/user-attachments/assets/3cf4bce1-2bd8-4be9-ab3d-2ae9731e9872)
 
 
-from the wave output we get 𝗦𝗥 = 𝟯𝟯.𝟵 𝘃/𝘂𝘀𝗲𝗰 
+
+## 5. Transient Response:
+
+![S_stageLDO_tran](https://github.com/user-attachments/assets/c66bbbc6-aa5e-411d-a601-87644b02e040)
+
+
 
 ## 7. CMRR Plot
 
