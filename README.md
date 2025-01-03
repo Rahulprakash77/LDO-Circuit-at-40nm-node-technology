@@ -242,3 +242,78 @@ where Vout_measured is the actual output voltage, and Vout_desired is the target
 
 
 
+
+
+
+
+# (B) LDO with Two Stage OPAMP
+## 1. Declaring design specifications.
+𝟭. 𝗧𝗼𝗼𝗹 𝗨𝘀𝗲𝗱: 𝗖𝗮𝗱𝗲𝗻𝗰𝗲 𝗩𝗶𝗿𝘁𝘂𝗼𝘀𝗼 𝘄𝗶𝘁𝗵 𝗧𝗦𝗠𝗖 𝟰𝟬𝗻𝗺 𝗡𝗼𝗱𝗲 𝗧𝗲𝗰𝗵𝗻𝗼𝗹𝗼𝗴𝘆
+𝗜𝗻𝗽𝘂𝘁 𝗩𝗼𝗹𝘁𝗮𝗴𝗲 (𝗩_𝗶𝗻)
+
+𝟮.(𝗡𝗼𝗺𝗶𝗻𝗮𝗹 𝗶𝗻𝗽𝘂𝘁 𝘃𝗼𝗹𝘁𝗮𝗴𝗲 𝘀𝘂𝗽𝗽𝗹𝗶𝗲𝗱 𝘁𝗼 𝘁𝗵𝗲 𝗟𝗗𝗢)
+𝗢𝘂𝘁𝗽𝘂𝘁 𝗩𝗼𝗹𝘁𝗮𝗴𝗲 (𝗩_𝗼𝘂𝘁):  𝟭.𝟭 𝗩 
+
+𝟯. (𝗥𝗲𝗴𝘂𝗹𝗮𝘁𝗲𝗱 𝗼𝘂𝘁𝗽𝘂𝘁 𝘃𝗼𝗹𝘁𝗮𝗴𝗲 𝗱𝗲𝗹𝗶𝘃𝗲𝗿𝗲𝗱 𝘁𝗼 𝘁𝗵𝗲 𝗹𝗼𝗮𝗱)
+𝗥𝗲𝗳𝗲𝗿𝗲𝗻𝗰𝗲 𝗩𝗼𝗹𝘁𝗮𝗴𝗲 (𝗩_𝗿𝗲𝗳): 𝟬.𝟵 𝗩 
+
+𝟰. (𝗥𝗲𝗳𝗲𝗿𝗲𝗻𝗰𝗲 𝘃𝗼𝗹𝘁𝗮𝗴𝗲 𝘂𝘀𝗲𝗱 𝗳𝗼𝗿 𝗳𝗲𝗲𝗱𝗯𝗮𝗰𝗸 𝗿𝗲𝗴𝘂𝗹𝗮𝘁𝗶𝗼𝗻 𝗶𝗻 𝘁𝗵𝗲 𝗟𝗗𝗢)
+𝗠𝗮𝘅𝗶𝗺𝘂𝗺 𝗟𝗼𝗮𝗱 𝗖𝘂𝗿𝗿𝗲𝗻𝘁 (𝗜_𝗺𝗮𝘅): 𝟬.𝟳𝟱 𝗩 
+
+𝟱. (𝗠𝗮𝘅𝗶𝗺𝘂𝗺 𝗰𝘂𝗿𝗿𝗲𝗻𝘁 𝘁𝗵𝗮𝘁 𝘁𝗵𝗲 𝗟𝗗𝗢 𝗰𝗮𝗻 𝘀𝘂𝗽𝗽𝗹𝘆 𝘁𝗼 𝘁𝗵𝗲 𝗹𝗼𝗮𝗱)
+𝗤𝘂𝗶𝗲𝘀𝗰𝗲𝗻𝘁 𝗖𝘂𝗿𝗿𝗲𝗻𝘁 (𝗜_𝗤): 𝟭𝟬 𝗺𝗔 
+
+𝟲. (𝗖𝘂𝗿𝗿𝗲𝗻𝘁 𝗱𝗿𝗮𝘄𝗻 𝗯𝘆 𝘁𝗵𝗲 𝗟𝗗𝗢 𝗶𝘁𝘀𝗲𝗹𝗳 𝘂𝗻𝗱𝗲𝗿 𝗻𝗼-𝗹𝗼𝗮𝗱 𝗰𝗼𝗻𝗱𝗶𝘁𝗶𝗼𝗻𝘀 𝗳𝗼𝗿 𝗶𝗻𝘁𝗲𝗿𝗻𝗮𝗹 𝗼𝗽𝗲𝗿𝗮𝘁𝗶𝗼𝗻) 𝟭𝟬 μ𝗔 
+
+
+## 2. Designing full circuit and make proper wire connection
+
+![LDO2stage](https://github.com/user-attachments/assets/9056183d-b4bc-47a7-b1d1-50e3eda1b3a7)
+
+
+## 3.DC Response
+
+![twostageLDO_dctrans](https://github.com/user-attachments/assets/7a6f389a-4a67-4ba3-aa01-01a818ab2ca7)
+
+![twostageLDO_dctrans1](https://github.com/user-attachments/assets/9d2fa944-9a36-443c-a4da-d57859ca75b8)
+
+
+## 4. Stability Analysis
+**DCGain=60.41dB , GBW = 39.58MHz and Phase Margin = 65.18 , Bandwidth=63.38kHz**
+
+![twostageLDO_stb](https://github.com/user-attachments/assets/094c23d0-862d-4111-bacd-e90c04004186)
+
+
+
+
+## 5. Transient Response:
+
+![twostageLDO_trans](https://github.com/user-attachments/assets/1442eb36-ab45-4870-a4e5-7d26096ce362)
+
+
+
+## 6. Line Regulation 
+**7.47 mV/V**
+
+![twostageLDO_lineReg](https://github.com/user-attachments/assets/b8656efc-5554-4a47-a421-e21ad102fee3)
+
+
+## 7. Load Regulation 
+**0.239 mV/mA**
+
+![twostageLDO_loadReg](https://github.com/user-attachments/assets/0e140f84-6ee2-4dd8-9f08-059558b6a93d)
+
+
+## 8. PSRR Plot
+
+![twostageLDO_psrr](https://github.com/user-attachments/assets/40898fbe-0a5c-4210-80bd-0565be2463a2)
+
+
+## 9. Noise Plot
+
+![twostageLDO_noise](https://github.com/user-attachments/assets/576d7a6f-953a-4cbd-ad3e-d20ac0198d15)
+
+
+
+
+
